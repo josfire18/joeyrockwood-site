@@ -1,0 +1,4 @@
+# Netlify headers file.
+# Force the Bluesky handle file to be served as plain text (Bluesky requires this).
+/.well-known/atproto-did
+  Content-Type: text/plain
