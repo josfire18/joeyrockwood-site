@@ -1,0 +1,137 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8" />
+<title>Joseph Rockwood — Résumé</title>
+<meta name="robots" content="noindex" />
+<!--
+  Print source for Joseph-Rockwood-Resume.pdf.
+  Content mirrors index.html. After editing either, rebuild the PDF:
+    python3 resume/build_pdf.py
+  Single column, real text, no images or tables: parses cleanly in
+  applicant tracking systems.
+-->
+<style>
+  @page { size: Letter; margin: 0.45in 0.55in; }
+  * { box-sizing: border-box; }
+  html { -webkit-print-color-adjust: exact; print-color-adjust: exact; }
+  body { font-variant-ligatures: none; font-feature-settings: "liga" 0;
+    margin: 0; color: #1c2526; background: #fff;
+    font: 10pt/1.28 "Carlito", Calibri, Arial, sans-serif;
+  }
+  a { color: inherit; text-decoration: none; }
+  header { border-bottom: 2px solid #0F766E; padding-bottom: 6pt; margin-bottom: 6pt; }
+  h1 { margin: 0; font-size: 22pt; letter-spacing: -0.01em; font-weight: 700; color: #0B3D3A; }
+  .title { margin: 2pt 0 6pt; font-size: 11pt; font-weight: 600; color: #0F766E; }
+  .contact { font-size: 9pt; color: #3b4a4b; }
+  .contact span + span::before { content: "·"; margin: 0 6pt; color: #9aa8a8; }
+  h2 {
+    margin: 8pt 0 3pt; font-size: 9.5pt; font-weight: 700; letter-spacing: 0.08em;
+    text-transform: uppercase; color: #0F766E;
+  }
+  p { margin: 0 0 4pt; }
+  .job { margin-bottom: 6pt; break-inside: avoid; }
+  .job-head { display: flex; justify-content: space-between; align-items: baseline; gap: 12pt; }
+  .role { font-weight: 700; font-size: 10.5pt; }
+  .when { font-size: 9pt; color: #3b4a4b; white-space: nowrap; }
+  .org { font-size: 9.5pt; color: #3b4a4b; }
+  .edu-org { font-size: 9.5pt; color: #3b4a4b; margin-bottom: 2pt; }
+  ul { margin: 2pt 0 0; padding-left: 14pt; }
+  li { margin-bottom: 1pt; }
+  .skills p { margin-bottom: 2.5pt; }
+  .skills b { color: #0B3D3A; }
+  .edu-head { display: flex; justify-content: space-between; align-items: baseline; }
+</style>
+</head>
+<body>
+
+<header>
+  <h1>Joseph Rockwood</h1>
+  <div class="title">Software Engineer — Full-stack .NET, SQL, APIs &amp; Reporting</div>
+  <div class="contact">
+    <span>Battle Creek, MI · Open to relocation</span>
+    <span><a href="https://joeyrockwood.fyi">joeyrockwood.fyi</a></span>
+    <span><a href="https://www.linkedin.com/in/joseph-rockwood">linkedin.com/in/joseph-rockwood</a></span>
+    <span><a href="https://github.com/josfire18">github.com/josfire18</a></span>
+  </div>
+</header>
+
+<h2>Summary</h2>
+<p>
+  Full-stack software engineer who builds .NET applications, SQL-driven reporting, and APIs,
+  turning slow, manual business processes into fast, reliable, automated systems. Experience
+  across insurance, sales, and manufacturing, including regulated, compliance-driven
+  environments: handling sensitive data, implementing access controls, and building the audit
+  and compliance reporting that supports formal audits.
+</p>
+
+<h2>Experience</h2>
+
+<div class="job">
+  <div class="job-head"><span><span class="role">Software Programmer</span><span class="org"> · ManhattanLife · Remote</span></span><span class="when">Dec 2022 – Present</span></div>
+  <ul>
+    <li>Design and build SQL Server solutions end to end — queries, views, stored procedures, and SSRS reporting — plus the APIs that surface the data.</li>
+    <li>Develop, modify, and test application code, forms, and scripts; troubleshoot system bugs and issues.</li>
+    <li>Partner with Operations to define reporting requirements and maintain technical specification docs.</li>
+    <li>Build and maintain enhancements to an internal voluntary benefits business application, including analysis and resolution of system issues.</li>
+  </ul>
+</div>
+
+<div class="job">
+  <div class="job-head"><span><span class="role">Systems Developer</span><span class="org"> · DMA Sales, LLC · Loris, South Carolina</span></span><span class="when">Sep 2021 – Oct 2022</span></div>
+  <ul>
+    <li>Full-stack development of custom .NET applications used in production to automate and optimize operations.</li>
+    <li>Maintained the company's SQL Server databases in T-SQL — queries, views, stored procedures, and scheduled jobs.</li>
+    <li>Generated user-requested reports with SSIS, SSRS, and Crystal Reports.</li>
+    <li>Supported users and scoped new application/report requests through a ticketing system.</li>
+  </ul>
+</div>
+
+<div class="job">
+  <div class="job-head"><span><span class="role">IT Programmer</span><span class="org"> · MORryde · Elkhart, Indiana</span></span><span class="when">Jun 2018 – Aug 2021</span></div>
+  <ul>
+    <li>Full-stack development of custom .NET apps to automate, optimize, and increase company efficiency.</li>
+    <li>Maintained extensive SQL Server databases in T-SQL — queries, views, stored procedures, and jobs.</li>
+    <li>Produced reports and visualizations via SSIS / SSRS / Crystal Reports and Tableau.</li>
+    <li>Wrote VBScript macros to interact with the Infor Visual ERP; supported users via Spiceworks and Jira.</li>
+  </ul>
+</div>
+
+<div class="job">
+  <div class="job-head"><span><span class="role">Web Programming Intern</span><span class="org"> · Trine University · Angola, Indiana</span></span><span class="when">Jan 2018 – Jun 2018</span></div>
+  <ul>
+    <li>Built and updated web applications to enhance university business processes.</li>
+    <li>Created dynamic, automated forms on Trine's portal (ExFlow + T-SQL) to reduce manual work for end users.</li>
+    <li>Coordinated requirements directly with departments and schools across the university.</li>
+  </ul>
+</div>
+
+<div class="job">
+  <div class="job-head"><span><span class="role">IT Technician</span><span class="org"> · Trine University · Angola, Indiana</span></span><span class="when">May 2017 – Dec 2017</span></div>
+  <ul>
+    <li>Resolved help-desk requests with courteous, timely, effective support.</li>
+    <li>Troubleshot and diagnosed Windows and Mac systems; installed and tested hardware and software.</li>
+    <li>Managed faculty, staff, and student accounts in Active Directory.</li>
+  </ul>
+</div>
+
+<h2>Skills</h2>
+<div class="skills">
+  <p><b>Languages &amp; .NET:</b> C#, .NET, VB / VBScript, C / C++, Java, Python, JavaScript, PowerShell, SQL, T-SQL, PL/SQL</p>
+  <p><b>Web &amp; APIs:</b> HTML5, CSS, MVC, REST APIs, JSON, XML, UI and application development</p>
+  <p><b>Data &amp; Databases:</b> MS SQL Server, MySQL, SSMS, SSIS, SSRS, Crystal Reports, ETL, Tableau, database design</p>
+  <p><b>Practice &amp; DevOps:</b> Agile, SDLC, CI/CD, Git / GitHub, TDD, Jira, Visual Studio, requirements gathering</p>
+  <p><b>Security &amp; Compliance:</b> Regulated-industry experience, sensitive data handling, access controls, audit and compliance reporting, supporting audits</p>
+</div>
+
+<h2>Education</h2>
+<div class="edu-head"><span class="role">B.S. in Informatics, Minor in Software Engineering</span><span class="when">May 2018</span></div>
+<div class="edu-org">Trine University · Angola, Indiana · GPA 3.5</div>
+<p style="font-size:9.5pt">
+  Coursework: Data Mining, Algorithm Design &amp; Analysis, Database Management &amp; Advanced Database,
+  Software Engineering, Software Analysis &amp; Design, Network Management &amp; Security,
+  Digital Forensics I &amp; II, Operations Research, Discrete Mathematics.
+</p>
+
+</body>
+</html>

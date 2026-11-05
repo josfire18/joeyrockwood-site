@@ -2,3 +2,7 @@
 # Force the Bluesky handle file to be served as plain text (Bluesky requires this).
 /.well-known/atproto-did
   Content-Type: text/plain
+
+# Résumé print source: reachable, but keep it out of search results.
+/resume/*
+  X-Robots-Tag: noindex
