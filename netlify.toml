@@ -1,0 +1,10 @@
+# Publish directory and build command stay as configured in the Netlify UI (publish = repo
+# root, no build command); this file only adds the skip rule.
+[build]
+  # Only deploy when something the site serves changed. Pushes that touch just .github/
+  # (CI, Dependabot config, Actions bumps), the repo docs or .gitignore are skipped instead
+  # of spending build credits. `git diff --quiet` exits 0 when nothing else changed, and
+  # exit 0 tells Netlify to skip. A change to this file still deploys.
+  # The two [ ] tests force a build when Netlify has no earlier build to compare with or
+  # is rebuilding the same commit ("Clear cache and deploy"), where the diff would be empty.
+  ignore = "[ x$CACHED_COMMIT_REF != x ] && [ x$CACHED_COMMIT_REF != x$COMMIT_REF ] && git diff --quiet $CACHED_COMMIT_REF $COMMIT_REF -- . ':(exclude).github' ':(exclude)README.md' ':(exclude)CLAUDE_CODE_HANDOFF.md' ':(exclude).gitignore'"
