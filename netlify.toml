@@ -5,6 +5,8 @@
   # (CI, Dependabot config, Actions bumps), the repo docs or .gitignore are skipped instead
   # of spending build credits. `git diff --quiet` exits 0 when nothing else changed, and
   # exit 0 tells Netlify to skip. A change to this file still deploys.
-  # The two [ ] tests force a build when Netlify has no earlier build to compare with or
-  # is rebuilding the same commit ("Clear cache and deploy"), where the diff would be empty.
-  ignore = "[ x$CACHED_COMMIT_REF != x ] && [ x$CACHED_COMMIT_REF != x$COMMIT_REF ] && git diff --quiet $CACHED_COMMIT_REF $COMMIT_REF -- . ':(exclude).github' ':(exclude)README.md' ':(exclude)CLAUDE_CODE_HANDOFF.md' ':(exclude).gitignore'"
+  # Deploy Previews always build: Netlify reports a skipped Deploy Preview to the pull
+  # request as failed checks, while a built one with unchanged files shows as neutral.
+  # The other two [ ] tests force a build when Netlify has no earlier build to compare with
+  # or is rebuilding the same commit ("Clear cache and deploy"), where the diff would be empty.
+  ignore = "[ x$CONTEXT != xdeploy-preview ] && [ x$CACHED_COMMIT_REF != x ] && [ x$CACHED_COMMIT_REF != x$COMMIT_REF ] && git diff --quiet $CACHED_COMMIT_REF $COMMIT_REF -- . ':(exclude).github' ':(exclude)README.md' ':(exclude)CLAUDE_CODE_HANDOFF.md' ':(exclude).gitignore'"
